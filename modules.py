@@ -1,62 +1,65 @@
 # =========================================================
-# 📦 MODULE + PIP DEMO (PYJOKES)
+# 📦 MODULE + PIP DEMO (PYJOKES + PYTTSX3)
 # =========================================================
 
 # Step 0:
-# Make sure you installed pyjokes using:
-# pip install pyjokes
+# Install required modules:
+# pip install pyjokes pyttsx3
 
 
 # ---------------------------------------------------------
-# Step 1: Importing the module
+# Step 1: Import modules
 # ---------------------------------------------------------
-import pyjokes   # external module
+import pyjokes     # for jokes
+import pyttsx3     # for text-to-speech
 
 
 # ---------------------------------------------------------
-# Step 2: Using functions from module
+# Step 2: Initialize text-to-speech engine
 # ---------------------------------------------------------
+engine = pyttsx3.init()
 
-# Get a single joke
+
+# ---------------------------------------------------------
+# Step 3: Get and print joke
+# ---------------------------------------------------------
 joke = pyjokes.get_joke()
 
-# Print the joke
 print("😂 Random Joke:")
 print(joke)
 
+# Speak the joke
+engine.say("Here is a joke for you")
+engine.say(joke)
+
 
 # ---------------------------------------------------------
-# Step 3: Using parameters (optional)
+# Step 4: Another joke with parameters
 # ---------------------------------------------------------
-
-# You can specify category & language
-# Categories: 'neutral', 'chuck', 'all'
-# Language: 'en'
-
 joke2 = pyjokes.get_joke(language='en', category='neutral')
 
 print("\n😂 Another Joke:")
 print(joke2)
 
+engine.say("Here is another joke")
+engine.say(joke2)
+
 
 # ---------------------------------------------------------
-# Step 4: Get multiple jokes
+# Step 5: Multiple jokes
 # ---------------------------------------------------------
-
 jokes_list = pyjokes.get_jokes()
 
 print("\n😂 Multiple Jokes:")
-for j in jokes_list[:3]:   # print first 3 jokes
+for j in jokes_list[:3]:
     print("-", j)
+    engine.say(j)
 
 
 # ---------------------------------------------------------
-# Step 5: What is happening?
+# Step 6: Run speech engine
 # ---------------------------------------------------------
-
-# pyjokes = module (installed using pip)
-# get_joke() = function inside module
-# pip = tool used to install this module
+engine.runAndWait()
 
 
 # =========================================================

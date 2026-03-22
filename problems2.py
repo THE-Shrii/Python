@@ -1,72 +1,86 @@
 # =========================================================
-# 🐍 PYTHON PRACTICE FULL SET
+# 🐍 PYTHON PRACTICE SET (Q1–Q17 WITH OUTPUTS)
 # =========================================================
 
 
 # ---------------------------------------------------------
 # 📌 Q1: Name and Age
 # ---------------------------------------------------------
-name = input("Enter name: ")
-age = int(input("Enter age: "))
+name = "Shrii"
+age = 20
 print(name, "is", age, "years old")
+# Output: Shrii is 20 years old
 
 
 # ---------------------------------------------------------
 # 📌 Q2: Square and Cube
 # ---------------------------------------------------------
-n = int(input("Enter number: "))
+n = 3
 print("Square:", n**2)
 print("Cube:", n**3)
+# Output:
+# Square: 9
+# Cube: 27
 
 
 # ---------------------------------------------------------
 # 📌 Q3: Swap two numbers
 # ---------------------------------------------------------
-a = int(input("Enter a: "))
-b = int(input("Enter b: "))
+a = 5
+b = 10
 a, b = b, a
 print("After swap:", a, b)
+# Output: After swap: 10 5
 
 
 # ---------------------------------------------------------
 # 📌 Q4: Even or Odd
 # ---------------------------------------------------------
-n = int(input("Enter number: "))
+n = 6
 print("Is Even?", n % 2 == 0)
+# Output: Is Even? True
 
 
 # ---------------------------------------------------------
 # 📌 Q5: Simple Calculator
 # ---------------------------------------------------------
-a = int(input("Enter first number: "))
-b = int(input("Enter second number: "))
+a = 10
+b = 5
 print("Add:", a + b)
 print("Sub:", a - b)
 print("Mul:", a * b)
 print("Div:", a / b)
+# Output:
+# Add: 15
+# Sub: 5
+# Mul: 50
+# Div: 2.0
 
 
 # ---------------------------------------------------------
 # 📌 Q6: Largest of two numbers
 # ---------------------------------------------------------
-a = int(input())
-b = int(input())
+a = 10
+b = 20
 print("Is first number greater?", a > b)
+# Output: Is first number greater? False
 
 
 # ---------------------------------------------------------
 # 📌 Q7: Type checking
 # ---------------------------------------------------------
-x = input("Enter something: ")
+x = "Hello"
 print(type(x))
+# Output: <class 'str'>
 
 
 # ---------------------------------------------------------
 # 📌 Q8: Celsius to Fahrenheit
 # ---------------------------------------------------------
-c = float(input("Enter Celsius: "))
+c = 25
 f = (c * 9/5) + 32
 print("Fahrenheit:", f)
+# Output: Fahrenheit: 77.0
 
 
 # ---------------------------------------------------------
@@ -76,6 +90,7 @@ lst = [10, 20, 30]
 lst.append(40)
 lst.remove(20)
 print("List:", lst)
+# Output: List: [10, 30, 40]
 
 
 # ---------------------------------------------------------
@@ -83,13 +98,15 @@ print("List:", lst)
 # ---------------------------------------------------------
 student = {"name": "Shrii", "marks": 90}
 print("Name:", student["name"])
+# Output: Name: Shrii
 
 
 # ---------------------------------------------------------
 # 📌 Q11: Multiple input sum
 # ---------------------------------------------------------
-a, b, c = map(int, input("Enter 3 numbers: ").split())
+a, b, c = 10, 20, 30
 print("Sum:", a + b + c)
+# Output: Sum: 60
 
 
 # ---------------------------------------------------------
@@ -100,6 +117,10 @@ b = False
 print(a and b)
 print(a or b)
 print(not a)
+# Output:
+# False
+# True
+# False
 
 
 # ---------------------------------------------------------
@@ -108,6 +129,9 @@ print(not a)
 lst = [1, 2, 3]
 print(2 in lst)
 print(5 not in lst)
+# Output:
+# True
+# True
 
 
 # ---------------------------------------------------------
@@ -117,6 +141,9 @@ a = [1, 2]
 b = [1, 2]
 print(a == b)
 print(a is b)
+# Output:
+# True
+# False
 
 
 # ---------------------------------------------------------
@@ -125,25 +152,36 @@ print(a is b)
 name = "Python"
 print(name[0:3])
 print(name[::-1])
+# Output:
+# Pyt
+# nohtyP
 
 
 # ---------------------------------------------------------
 # 📌 Q16: Sum, Product, Greater
 # ---------------------------------------------------------
-a = int(input("Enter first number: "))
-b = int(input("Enter second number: "))
+a = 5
+b = 10
 print("Sum:", a + b)
 print("Product:", a * b)
 print("Is first number greater?", a > b)
+# Output:
+# Sum: 15
+# Product: 50
+# Is first number greater? False
 
 
 # ---------------------------------------------------------
 # 📌 Q17: Square, Even, Greater than 10
 # ---------------------------------------------------------
-n = int(input("Enter number: "))
+n = 6
 print("Square:", n**2)
 print("Is Even?", n % 2 == 0)
 print("Greater than 10?", n > 10)
+# Output:
+# Square: 36
+# Is Even? True
+# Greater than 10? False
 
 
 # =========================================================

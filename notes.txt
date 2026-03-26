@@ -1096,3 +1096,436 @@ print("End")
 # =========================================================
 # 🎯 END OF NOTES
 # =========================================================
+
+
+# =========================================================
+# 🐍 PYTHON NOTES: FUNCTIONS (DETAILED)
+# =========================================================
+
+
+# =========================================================
+# 📌 1. WHAT IS A FUNCTION?
+# =========================================================
+
+# Function = a block of code that runs only when called
+
+# It helps to reuse code instead of writing it again and again
+
+
+# =========================================================
+# 📌 2. BASIC FUNCTION
+# =========================================================
+
+def greet():
+    print("Hello Shrii")
+
+greet()
+
+# Output:
+# Hello Shrii
+
+
+# =========================================================
+# 📌 3. FUNCTION WITH PARAMETERS
+# =========================================================
+
+def greet(name):
+    print("Hello", name)
+
+greet("Rahul")
+
+# Output:
+# Hello Rahul
+
+
+# =========================================================
+# 📌 4. FUNCTION WITH RETURN VALUE
+# =========================================================
+
+def add(a, b):
+    return a + b
+
+result = add(5, 3)
+print(result)
+
+# Output:
+# 8
+
+
+# =========================================================
+# 📌 5. DEFAULT PARAMETERS
+# =========================================================
+
+def greet(name="User"):
+    print("Hello", name)
+
+greet()
+greet("Shrii")
+
+# Output:
+# Hello User
+# Hello Shrii
+
+
+# =========================================================
+# 📌 6. KEYWORD ARGUMENTS
+# =========================================================
+
+def info(name, age):
+    print(name, age)
+
+info(age=20, name="Aman")
+
+# Output:
+# Aman 20
+
+
+# =========================================================
+# 📌 7. ARBITRARY ARGUMENTS (*args)
+# =========================================================
+
+def total(*numbers):
+    print(sum(numbers))
+
+total(1, 2, 3, 4)
+
+# Output:
+# 10
+
+
+# =========================================================
+# 📌 8. KEYWORD ARBITRARY (**kwargs)
+# =========================================================
+
+def details(**data):
+    print(data)
+
+details(name="Shrii", age=18)
+
+# Output:
+# {'name': 'Shrii', 'age': 18}
+
+
+# =========================================================
+# 📌 9. RECURSION (IMPORTANT)
+# =========================================================
+
+def factorial(n):
+    if n == 1:
+        return 1
+    return n * factorial(n-1)
+
+print(factorial(5))
+
+# Output:
+# 120
+
+
+# =========================================================
+# 📌 10. LAMBDA FUNCTION
+# =========================================================
+
+add = lambda a, b: a + b
+print(add(2, 3))
+
+# Output:
+# 5
+
+
+# =========================================================
+# 🎯 END OF NOTES
+# =========================================================
+
+
+
+
+
+
+
+
+
+
+
+# =========================================================
+# 🐍 PYTHON NOTES: RECURSION (DETAILED)
+# =========================================================
+
+
+# =========================================================
+# 📌 1. WHAT IS RECURSION?
+# =========================================================
+
+# Recursion = a function calling itself
+
+# It repeats the same task with smaller input
+
+
+# =========================================================
+# 📌 2. BASIC STRUCTURE
+# =========================================================
+
+def func(n):
+    if n == 0:          # Base Case (stopping condition)
+        return
+    print(n)
+    func(n-1)           # Recursive Call
+
+func(5)
+
+# Output:
+# 5
+# 4
+# 3
+# 2
+# 1
+
+
+# =========================================================
+# 📌 3. IMPORTANT CONCEPTS
+# =========================================================
+
+# 1. Base Case → stops recursion
+# 2. Recursive Case → function calling itself
+
+
+# =========================================================
+# 📌 4. FACTORIAL USING RECURSION
+# =========================================================
+
+def factorial(n):
+    if n == 1:
+        return 1
+    return n * factorial(n-1)
+
+print(factorial(5))
+
+# Output:
+# 120
+
+
+# =========================================================
+# 📌 5. SUM OF N NUMBERS
+# =========================================================
+
+def sum_n(n):
+    if n == 0:
+        return 0
+    return n + sum_n(n-1)
+
+print(sum_n(5))
+
+# Output:
+# 15
+
+
+# =========================================================
+# 📌 6. FIBONACCI USING RECURSION
+# =========================================================
+
+def fib(n):
+    if n == 0:
+        return 0
+    elif n == 1:
+        return 1
+    return fib(n-1) + fib(n-2)
+
+print(fib(6))
+
+# Output:
+# 8
+
+
+# =========================================================
+# 📌 7. RECURSION TRACE (IMPORTANT)
+# =========================================================
+
+# factorial(3)
+# = 3 * factorial(2)
+# = 3 * (2 * factorial(1))
+# = 3 * (2 * 1)
+# = 6
+
+
+# =========================================================
+# 📌 8. WRONG RECURSION (ERROR)
+# =========================================================
+
+# def wrong(n):
+#     return n * wrong(n-1)   ❌ No base case → infinite recursion
+
+# Leads to: RecursionError
+
+
+# =========================================================
+# 📌 9. REAL USE CASES
+# =========================================================
+
+# ✔ Factorial
+# ✔ Fibonacci
+# ✔ Tree/Graph problems
+# ✔ Backtracking
+
+
+# =========================================================
+# 🎯 END OF NOTES
+# =========================================================
+
+
+
+# =========================================================
+# 🐍 PYTHON FILE I/O (DETAILED NOTES)
+# =========================================================
+
+
+# =========================================================
+# 📌 1. WHAT IS FILE I/O?
+# =========================================================
+
+# File I/O = Reading and Writing data to files
+# Used for permanent storage
+
+
+# =========================================================
+# 📌 2. OPENING A FILE
+# =========================================================
+
+# Syntax:
+# file = open("filename", "mode")
+
+f = open("demo.txt", "r")   # read mode
+
+
+# =========================================================
+# 📌 3. FILE MODES
+# =========================================================
+
+# "r"  → Read (default)
+# "w"  → Write (overwrite)
+# "a"  → Append
+# "x"  → Create new file
+# "b"  → Binary mode
+# "t"  → Text mode (default)
+
+# Examples:
+# open("file.txt", "r")
+# open("file.txt", "w")
+# open("file.txt", "a")
+
+
+# =========================================================
+# 📌 4. READING FILE
+# =========================================================
+
+# read() → reads full content
+f = open("demo.txt", "r")
+print(f.read())
+f.close()
+
+# readline() → reads one line
+f = open("demo.txt", "r")
+print(f.readline())
+f.close()
+
+# readlines() → returns list of lines
+f = open("demo.txt", "r")
+print(f.readlines())
+f.close()
+
+
+# =========================================================
+# 📌 5. WRITING FILE
+# =========================================================
+
+# write() → overwrite content
+f = open("demo.txt", "w")
+f.write("Hello World")
+f.close()
+
+# Output: File content becomes "Hello World"
+
+
+# =========================================================
+# 📌 6. APPENDING FILE
+# =========================================================
+
+f = open("demo.txt", "a")
+f.write("\nNew Line Added")
+f.close()
+
+# Output:
+# Hello World
+# New Line Added
+
+
+# =========================================================
+# 📌 7. WITH STATEMENT (BEST PRACTICE)
+# =========================================================
+
+# Automatically closes file
+
+with open("demo.txt", "r") as f:
+    print(f.read())
+
+
+# =========================================================
+# 📌 8. IMPORTANT METHODS
+# =========================================================
+
+f = open("demo.txt", "r")
+
+# tell() → current position
+print(f.tell())
+
+# seek() → move cursor
+f.seek(0)
+
+# readable()
+print(f.readable())
+
+# writable()
+print(f.writable())
+
+f.close()
+
+
+# =========================================================
+# 📌 9. FILE EXIST CHECK
+# =========================================================
+
+import os
+
+if os.path.exists("demo.txt"):
+    print("File exists")
+
+
+# =========================================================
+# 📌 10. DELETE FILE
+# =========================================================
+
+import os
+
+os.remove("demo.txt")
+
+
+# =========================================================
+# 📌 11. COPY FILE
+# =========================================================
+
+with open("demo.txt", "r") as f1:
+    with open("copy.txt", "w") as f2:
+        f2.write(f1.read())
+
+
+# =========================================================
+# 📌 12. BINARY FILE
+# =========================================================
+
+# Example: image or pdf
+f = open("image.jpg", "rb")
+data = f.read()
+f.close()
+
+
+# =========================================================
+# 🎯 END OF FILE I/O
+# =========================================================

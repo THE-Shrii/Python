@@ -319,3 +319,139 @@ elif guess > number:
     print("Too high 📈, correct number was", number)
 else:
     print("Too low 📉, correct number was", number)
+
+
+
+
+name = input("Enter name: ")
+attendance = input("Are you present? (yes/no): ")
+
+if attendance == "yes":
+    print(name, "is Present ✅")
+else:
+    print(name, "is Absent ❌")
+
+
+
+
+
+
+
+
+
+
+password = input("Enter password: ")
+
+if password == "python123":
+    print("Access Granted 🔓")
+else:
+    print("Access Denied 🔒")
+
+
+
+student = ("Amit", 101, 85)
+
+print("Name:", student[0])
+print("Roll:", student[1])
+print("Marks:", student[2])
+
+
+
+students = []
+
+students.append(input("Enter student 1 name: "))
+students.append(input("Enter student 2 name: "))
+students.append(input("Enter student 3 name: "))
+
+print("Student List:", students)
+
+print("First Student:", students[0])
+print("Last Student:", students[-1])
+
+
+
+a = float(input("Enter first number: "))
+b = float(input("Enter second number: "))
+
+op = input("Enter operator (+ - * /): ")
+
+if op == "+":
+    print(a + b)
+elif op == "-":
+    print(a - b)
+elif op == "*":
+    print(a * b)
+elif op == "/":
+    if b != 0:
+        print(a / b)
+    else:
+        print("Cannot divide by zero")
+else:
+    print("Invalid operator")
+
+
+
+
+num = int(input("Enter number: "))
+
+if num % 2 == 0:
+    print("Even Number")
+else:
+    print("Odd Number")
+
+
+
+marks = float(input("Enter marks: "))
+
+if marks >= 90:
+    print("Grade A+ 🌟")
+elif marks >= 75:
+    print("Grade A")
+elif marks >= 60:
+    print("Grade B")
+elif marks >= 40:
+    print("Grade C")
+else:
+    print("Fail ❌")
+
+
+
+username = input("Enter username: ")
+password = input("Enter password: ")
+
+if username == "admin" and password == "1234":
+    print("Login Successful ✅")
+else:
+    print("Invalid Login ❌")
+
+
+
+item1 = float(input("Enter price of item 1: "))
+item2 = float(input("Enter price of item 2: "))
+item3 = float(input("Enter price of item 3: "))
+
+total = item1 + item2 + item3
+
+print("Total Bill:", total)
+
+if total > 1000:
+    print("You got discount offer 🎁")
+else:
+    print("No discount")
+
+
+
+
+
+import random
+
+number = random.randint(1, 10)
+
+guess = int(input("Guess a number between 1 to 10: "))
+
+if guess == number:
+    print("Correct! 🎉")
+elif guess > number:
+    print("Too high 📈, correct number was", number)
+else:
+    print("Too low 📉, correct number was", number)

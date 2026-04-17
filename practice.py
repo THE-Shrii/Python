@@ -320,6 +320,7 @@ print("Even" if x%2==0 else "Odd")
 x = 7
 if 1 <= x <= 10:
     print("In range")
+<<<<<<< HEAD
 # Output: In range
 
 
@@ -735,3 +736,6 @@ print(bool([]), bool([1]))
 lst = [1,2,3,4]
 print([i for i in lst if i%2!=0])
 # Output: [1,3]
+=======
+# Output: In range
+>>>>>>> f0ba588923cf7847c28421dd3e19a892546bd759

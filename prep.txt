@@ -3128,3 +3128,256 @@ for i in lst:
     if i > m:
         m = i
 print(m)
+
+
+
+
+
+
+
+
+
+
+
+
+
+🐍 FUNCTIONS IN PYTHON
+📌 What is a Function?
+
+A function is a block of reusable code that performs a specific task.
+
+👉 Helps in:
+
+Code reuse
+Better readability
+Modular programming
+🧾 Syntax:
+def function_name():
+    # code
+🔥 Example:
+def greet():
+    print("Hello")
+
+greet()
+⚡ 1. FUNCTION WITH PARAMETERS
+def add(a, b):
+    print(a + b)
+
+add(2, 3)
+⚡ 2. FUNCTION WITH RETURN
+def add(a, b):
+    return a + b
+
+result = add(5, 3)
+print(result)
+⚡ 3. DEFAULT PARAMETERS
+def greet(name="User"):
+    print("Hello", name)
+
+greet()
+greet("Shrii")
+⚡ 4. KEYWORD ARGUMENTS
+def student(name, age):
+    print(name, age)
+
+student(age=20, name="Shrii")
+⚡ 5. ARBITRARY ARGUMENTS (*args)
+def total(*nums):
+    print(sum(nums))
+
+total(1,2,3,4)
+⚡ 6. KEYWORD ARBITRARY (**kwargs)
+def info(**data):
+    print(data)
+
+info(name="Shrii", age=20)
+⚡ 7. RECURSION (IMPORTANT)
+def fact(n):
+    if n == 1:
+        return 1
+    return n * fact(n-1)
+
+print(fact(5))
+🧠 IMPORTANT POINTS
+
+✔ Function defined using def
+✔ return sends value back
+✔ Can take arguments
+✔ Can be reused
+
+❗ INTERVIEW QUESTIONS
+Q1. What is function?
+
+👉 Reusable block of code.
+
+Q2. Difference between print and return?
+
+👉 print → display
+👉 return → send value back
+
+Q3. What is recursion?
+
+👉 Function calling itself.
+
+Q4. What are *args and **kwargs?
+
+👉 *args → multiple values
+👉 **kwargs → key-value arguments
+
+🎯 QUICK REVISION
+Concept	Meaning
+def	define function
+return	return value
+args	multiple inputs
+recursion	self call
+🚀 40 FUNCTION QUESTIONS (IDE + ANSWERS)
+🔰 BASIC (1–10)
+# 1 Simple function
+def greet():
+    print("Hello")
+greet()
+# 2 Add two numbers
+def add(a,b):
+    return a+b
+print(add(2,3))
+# 3 Multiply
+def mul(a,b):
+    return a*b
+print(mul(2,3))
+# 4 Square
+def square(x):
+    return x*x
+print(square(4))
+# 5 Even/odd
+def check(x):
+    return x%2==0
+print(check(4))
+# 6 Max of two
+def max2(a,b):
+    return a if a>b else b
+print(max2(3,7))
+# 7 String length
+def length(s):
+    return len(s)
+print(length("abc"))
+# 8 Reverse string
+def rev(s):
+    return s[::-1]
+print(rev("python"))
+# 9 Count vowels
+def vowels(s):
+    return sum(1 for ch in s if ch in "aeiou")
+print(vowels("hello"))
+# 10 Factorial
+def fact(n):
+    f=1
+    for i in range(1,n+1):
+        f*=i
+    return f
+print(fact(5))
+⚙️ INTERMEDIATE (11–25)
+# 11 Prime check
+def isprime(n):
+    for i in range(2,n):
+        if n%i==0:
+            return False
+    return True
+print(isprime(7))
+# 12 Fibonacci
+def fib(n):
+    a,b=0,1
+    for _ in range(n):
+        print(a)
+        a,b=b,a+b
+fib(5)
+# 13 Sum of digits
+def sumdig(n):
+    return sum(int(i) for i in str(n))
+print(sumdig(123))
+# 14 Palindrome
+def pal(s):
+    return s==s[::-1]
+print(pal("madam"))
+# 15 Count words
+def words(s):
+    return len(s.split())
+print(words("hello world"))
+# 16 Max in list
+def maxlist(lst):
+    return max(lst)
+print(maxlist([1,5,3]))
+# 17 Min in list
+def minlist(lst):
+    return min(lst)
+print(minlist([1,5,3]))
+# 18 Sum list
+def sumlist(lst):
+    return sum(lst)
+print(sumlist([1,2,3]))
+# 19 Remove duplicates
+def unique(lst):
+    return list(set(lst))
+print(unique([1,2,2,3]))
+# 20 Count frequency
+def freq(s):
+    d={}
+    for i in s:
+        d[i]=d.get(i,0)+1
+    return d
+print(freq("hello"))
+🚀 ADVANCED (26–40)
+# 21 Recursion factorial
+def fact(n):
+    if n==1:
+        return 1
+    return n*fact(n-1)
+print(fact(5))
+# 22 Recursion sum
+def sumrec(n):
+    if n==0:
+        return 0
+    return n+sumrec(n-1)
+print(sumrec(5))
+# 23 GCD
+def gcd(a,b):
+    while b:
+        a,b=b,a%b
+    return a
+print(gcd(12,18))
+# 24 LCM
+def lcm(a,b):
+    return a*b//gcd(a,b)
+print(lcm(4,6))
+# 25 Check anagram
+def ana(s1,s2):
+    return sorted(s1)==sorted(s2)
+print(ana("listen","silent"))
+# 26 Flatten list
+def flat(lst):
+    res=[]
+    for i in lst:
+        if isinstance(i,list):
+            res.extend(i)
+        else:
+            res.append(i)
+    return res
+print(flat([[1,2],[3,4]]))
+# 27 Count even
+def even(lst):
+    return sum(1 for i in lst if i%2==0)
+print(even([1,2,3,4]))
+# 28 Multiply list
+def mul(lst):
+    res=1
+    for i in lst:
+        res*=i
+    return res
+print(mul([1,2,3]))
+# 29 Reverse list
+def rev(lst):
+    return lst[::-1]
+print(rev([1,2,3]))
+# 30 Merge lists
+def merge(a,b):
+    return a+b
+print(merge([1],[2]))

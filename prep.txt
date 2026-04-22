@@ -274,3 +274,132 @@ Q3. What is difference between list and tuple?
 Q4. How to check data type?
 
 👉 Using type() function.
+
+
+
+
+
+
+
+
+
+////NUMBERS AND CASTING
+🐍 1. NUMBERS IN PYTHON
+📌 What are Numbers?
+
+In Python, numbers are used to store numeric values and perform mathematical operations.
+
+Python supports 3 main types of numbers:
+
+🔢 Types of Numbers
+1. Integer (int)
+
+Whole numbers (positive or negative) without decimal point.
+
+x = 10
+y = -5
+print(type(x))
+
+✔ Example: 1, 100, -50
+
+2. Float (float)
+
+Numbers with decimal point.
+
+x = 10.5
+y = -3.14
+print(type(x))
+
+✔ Example: 2.5, 99.99
+
+3. Complex Numbers (complex)
+
+Numbers with real and imaginary parts.
+
+x = 3 + 5j
+print(type(x))
+
+✔ Format: a + bj
+
+⚡ Important Point:
+
+Python automatically detects number type.
+
+❗ Interview Question:
+Q: What are numeric data types in Python?
+
+👉 int, float, and complex.
+
+🔄 2. TYPE CASTING (TYPE CONVERSION)
+📌 What is Casting?
+
+Type casting means converting one data type into another.
+
+🔁 Types of Casting
+1. Implicit Casting (Automatic)
+
+Python converts smaller type → larger type automatically.
+
+x = 10      # int
+y = 2.5     # float
+z = x + y   # int → float automatically
+print(z)
+print(type(z))
+
+✔ Result: 12.5 (float)
+
+2. Explicit Casting (Manual)
+
+We manually convert data type using functions.
+
+🧾 Common Casting Functions:
+Function	Converts To
+int()	Integer
+float()	Float
+str()	String
+🔥 Examples:
+👉 String to Integer
+x = "10"
+y = int(x)
+print(y + 5)
+👉 Integer to Float
+x = 10
+y = float(x)
+print(y)
+👉 Float to Integer
+x = 10.9
+y = int(x)
+print(y)
+
+✔ Output: 10 (decimal removed)
+
+👉 Number to String
+x = 100
+y = str(x)
+print(type(y))
+❗ Interview Questions:
+Q1. What is type casting?
+
+👉 Converting one data type into another.
+
+Q2. What is difference between implicit and explicit casting?
+Implicit → Automatic conversion by Python
+Explicit → Manually done by programmer
+Q3. What happens when float is converted to int?
+
+👉 Decimal part is removed.
+
+🎯 QUICK REVISION
+Concept	Meaning	Example
+int	Whole number	10
+float	Decimal number	10.5
+complex	Real + imaginary	3+5j
+Casting	Type conversion	int("10")
+🚀 BONUS INTERVIEW TRICK
+
+👉 If interviewer asks:
+“Why casting is important?”
+
+✔ Answer:
+
+It is used to convert data into required type for operations like math, input handling, and calculations.

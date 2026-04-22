@@ -3720,3 +3720,217 @@ binary(5)
 👉 Say this:
 
 Recursion simplifies problems by dividing them into smaller subproblems, but must always include a base case to avoid infinite recursion.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+🐍 ARRAYS IN PYTHON
+📌 What is an Array?
+
+An array is a collection of elements stored in contiguous memory locations.
+
+👉 In Python, we mostly use:
+
+List (most common)
+array module (typed arrays)
+🧾 Syntax (List as Array):
+arr = [1, 2, 3, 4]
+🧾 Syntax (Using array module):
+import array
+arr = array.array('i', [1,2,3])
+
+👉 'i' = integer type
+
+🔥 1. FEATURES
+
+✔ Indexed
+✔ Ordered
+✔ Mutable
+✔ Allows duplicates
+
+⚡ 2. ACCESS ELEMENTS
+arr = [10, 20, 30]
+print(arr[0])
+⚡ 3. COMMON OPERATIONS
+Add
+arr.append(40)
+Insert
+arr.insert(1, 15)
+Remove
+arr.remove(20)
+⚡ 4. LOOP ARRAY
+for i in arr:
+    print(i)
+🧠 INTERVIEW QUESTIONS
+Q1. Array vs List?
+
+👉 Array → fixed type
+👉 List → multiple types
+
+Q2. Why use list instead of array?
+
+👉 More flexible & commonly used
+
+Q3. Is Python array dynamic?
+
+👉 List → dynamic
+👉 array module → fixed type
+
+🎯 QUICK REVISION
+Concept	Meaning
+array/list	collection
+index	position
+mutable	can change
+🚀 40 ARRAY QUESTIONS (IDE + ANSWERS)
+🔰 BASIC (1–10)
+# 1 Create array
+arr = [1,2,3]
+print(arr)
+# 2 Access element
+print(arr[1])
+# 3 Length
+print(len(arr))
+# 4 Add element
+arr.append(4)
+print(arr)
+# 5 Insert element
+arr.insert(1,10)
+print(arr)
+# 6 Remove element
+arr.remove(2)
+print(arr)
+# 7 Pop element
+arr.pop()
+print(arr)
+# 8 Loop array
+for i in arr:
+    print(i)
+# 9 Check element
+print(3 in arr)
+# 10 Reverse array
+print(arr[::-1])
+⚙️ INTERMEDIATE (11–25)
+# 11 Sum of array
+print(sum(arr))
+# 12 Max element
+print(max(arr))
+# 13 Min element
+print(min(arr))
+# 14 Sort array
+arr.sort()
+print(arr)
+# 15 Count element
+print(arr.count(1))
+# 16 Find index
+print(arr.index(3))
+# 17 Copy array
+a2 = arr.copy()
+print(a2)
+# 18 Extend array
+arr.extend([5,6])
+print(arr)
+# 19 Remove duplicates
+print(list(set(arr)))
+# 20 Even numbers
+print([x for x in arr if x%2==0])
+# 21 Odd numbers
+print([x for x in arr if x%2!=0])
+# 22 Square elements
+print([x*x for x in arr])
+# 23 Sum using loop
+s=0
+for i in arr:
+    s+=i
+print(s)
+# 24 Max manually
+m = arr[0]
+for i in arr:
+    if i > m:
+        m = i
+print(m)
+# 25 Min manually
+m = arr[0]
+for i in arr:
+    if i < m:
+        m = i
+print(m)
+🚀 ADVANCED (26–40)
+# 26 Second largest
+arr = [1,5,3]
+arr.sort()
+print(arr[-2])
+# 27 Second smallest
+arr.sort()
+print(arr[1])
+# 28 Reverse using loop
+res = []
+for i in arr:
+    res.insert(0,i)
+print(res)
+# 29 Count even numbers
+c=0
+for i in arr:
+    if i%2==0:
+        c+=1
+print(c)
+# 30 Count odd numbers
+c=0
+for i in arr:
+    if i%2!=0:
+        c+=1
+print(c)
+# 31 Merge arrays
+a=[1,2]
+b=[3,4]
+print(a+b)
+# 32 Find common elements
+a=[1,2,3]
+b=[2,3,4]
+print(list(set(a)&set(b)))
+# 33 Unique elements
+print(list(set(arr)))
+# 34 Rotate left
+arr = [1,2,3]
+print(arr[1:] + arr[:1])
+# 35 Rotate right
+print(arr[-1:] + arr[:-1])
+# 36 Check sorted
+print(arr == sorted(arr))
+# 37 Find duplicates
+dup=[]
+for i in arr:
+    if arr.count(i)>1 and i not in dup:
+        dup.append(i)
+print(dup)
+# 38 Remove duplicates manually
+res=[]
+for i in arr:
+    if i not in res:
+        res.append(i)
+print(res)
+# 39 Multiply elements
+res=1
+for i in arr:
+    res*=i
+print(res)
+# 40 Pair elements
+for i in range(len(arr)-1):
+    print(arr[i],arr[i+1])
+🚀 FINAL INTERVIEW TIP 🔥
+
+👉 Say this:
+
+In Python, arrays are typically implemented using lists, which are dynamic and can store multiple data types, making them more flexible than traditional arrays.

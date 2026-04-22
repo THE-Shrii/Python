@@ -155,3 +155,122 @@ Q3. How do you display output?
 Q4. What is default input type?
 
 👉 String
+
+
+
+
+
+
+
+
+
+/////COMMENTS , VARIABLES AND DATA TYPES
+
+
+🐍 1. COMMENTS IN PYTHON
+📌 What are Comments?
+
+Comments are non-executable lines in code used to explain logic. Python ignores them during execution.
+
+They help:
+
+Improve readability
+Explain code to others
+Make debugging easier
+✍️ Types of Comments
+1. Single-line Comment
+
+Starts with #
+
+# This is a single line comment
+print("Hello")
+2. Multi-line Comment
+
+Written using triple quotes ''' ''' or """ """
+
+"""
+This is a multi-line comment
+Used for explanation or documentation
+"""
+print("Python")
+❗ Interview Question:
+Q: Why do we use comments?
+
+👉 To explain code and improve readability without affecting execution.
+
+🧠 2. VARIABLES IN PYTHON
+📌 What are Variables?
+
+Variables are containers used to store data values in memory.
+
+✍️ Syntax:
+variable_name = value
+🧾 Example:
+name = "Shrii"
+age = 20
+marks = 85.5
+⚡ Rules for Variables:
+Must start with a letter or _
+Cannot start with number
+Case-sensitive (age ≠ Age)
+No special symbols like @, #, $
+❗ Interview Question:
+Q: What is variable in Python?
+
+👉 A name used to store data in memory.
+
+🔥 Multiple Assignment:
+a, b, c = 10, 20, 30
+print(a, b, c)
+🧬 3. DATA TYPES IN PYTHON
+📌 What are Data Types?
+
+Data types define the type of value a variable can store.
+
+🧾 Common Data Types:
+1. Numeric Types
+a = 10        # int
+b = 10.5      # float
+c = 2 + 3j    # complex
+2. String
+name = "Shrii"
+3. List (Mutable)
+list1 = [1, 2, 3, 4]
+4. Tuple (Immutable)
+tuple1 = (1, 2, 3)
+5. Dictionary (Key-Value)
+student = {"name": "Shrii", "age": 20}
+6. Set (Unique Values)
+set1 = {1, 2, 3, 3}
+7. Boolean
+x = True
+y = False
+🔥 Check Data Type:
+x = 10
+print(type(x))
+❗ Interview Question:
+Q: Why do we need data types?
+
+👉 To define what kind of value a variable holds and how memory is used.
+
+🎯 QUICK REVISION TABLE
+Concept	Meaning	Example
+Comments	Non-executable code	# This is comment
+Variable	Stores data	x = 10
+Data Type	Type of value	int, str, list
+🚀 BONUS INTERVIEW QUESTIONS
+Q1. What is comment in Python?
+
+👉 Code ignored by interpreter used for explanation.
+
+Q2. What is variable?
+
+👉 Name used to store data value.
+
+Q3. What is difference between list and tuple?
+
+👉 List is mutable, tuple is immutable.
+
+Q4. How to check data type?
+
+👉 Using type() function.

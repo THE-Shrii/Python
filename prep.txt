@@ -63,3 +63,95 @@ A module is a file containing Python code (functions, variables, classes) that c
 If interviewer asks “introduce yourself in Python context”, you can say:
 
 “I have basic knowledge of Python including variables, loops, functions, and I’m currently improving my problem-solving skills using Python.”
+
+
+
+
+
+
+
+/////syntax , input or output
+
+🐍 1. Python Syntax (Basic Structure)
+📌 What is Syntax?
+
+Syntax means the rules to write Python code correctly.
+
+Python is known for simple and readable syntax.
+
+🧾 Example of Python Syntax:
+if 5 > 2:
+    print("Five is greater than two")
+⚡ Key Points:
+No semicolons needed (optional)
+Uses indentation instead of {}
+Case-sensitive language
+❗ Common Interview Question:
+Q: Why is indentation important in Python?
+
+👉 Because Python uses indentation to define blocks of code like loops, conditions, and functions.
+
+⌨️ 2. Input in Python
+📌 What is Input?
+
+Input is used to take data from the user.
+
+Python uses the input() function.
+
+🧾 Syntax:
+variable = input("Enter something: ")
+🧾 Example:
+name = input("Enter your name: ")
+print("Hello", name)
+⚡ Important Point:
+Input is always string type by default
+🔥 Type Conversion Example:
+age = int(input("Enter age: "))
+❗ Interview Question:
+Q: Why do we use int(input())?
+
+👉 Because input() returns string, and int() converts it into integer.
+
+🖨️ 3. Output in Python
+📌 What is Output?
+
+Output is used to display result on screen.
+
+Python uses print() function.
+
+🧾 Syntax:
+print(value)
+🧾 Example:
+print("Hello World")
+⚡ Multiple Output Example:
+name = "Shrii"
+age = 20
+print("Name:", name, "Age:", age)
+🔥 f-string Output (Modern way):
+print(f"My name is {name} and age is {age}")
+❗ Interview Question:
+Q: Difference between print and return?
+
+👉 print shows output on screen, return sends value back from function.
+
+🎯 QUICK REVISION (VERY IMPORTANT)
+Topic	Function	Example
+Syntax	Rules of writing code	indentation
+Input	Take data from user	input()
+Output	Display result	print()
+🚀 BONUS INTERVIEW QUESTION SET
+Q1. What is Python syntax?
+
+👉 Rules to write correct Python code.
+
+Q2. How do you take input in Python?
+
+👉 Using input() function.
+
+Q3. How do you display output?
+
+👉 Using print() function.
+
+Q4. What is default input type?
+
+👉 String

@@ -533,3 +533,127 @@ replace()	replace text
 split()	string → list
 join()	list → string
 strip()	remove spaces
+
+
+
+
+
+
+////////////BOOLEANS
+
+🐍 BOOLEANS IN PYTHON
+📌 What is Boolean?
+
+A Boolean is a data type that has only two values:
+
+True
+False
+
+It is mainly used for decision making and conditions.
+
+🔥 Example:
+x = True
+y = False
+
+print(x)
+print(y)
+🧠 1. BOOLEAN IN CONDITIONS
+
+Booleans are mostly used in if-else statements.
+
+a = 10
+b = 5
+
+print(a > b)   # True
+print(a < b)   # False
+⚡ 2. BOOLEAN VALUES FROM EXPRESSIONS
+
+Python automatically returns Boolean results in comparisons:
+
+Expression	Result
+10 > 5	True
+10 == 5	False
+10 != 5	True
+Example:
+print(10 == 10)   # True
+print(10 != 10)   # False
+🔄 3. BOOL() FUNCTION
+
+The bool() function converts values into Boolean.
+
+print(bool(1))      # True
+print(bool(0))      # False
+print(bool("Hi"))   # True
+print(bool(""))     # False
+⚡ Rule:
+Value	Boolean Result
+0	False
+Empty string ""	False
+Empty list []	False
+Any non-zero value	True
+🧠 4. BOOLEAN IN IF-ELSE
+age = 18
+
+if age >= 18:
+    print("Eligible to vote")
+else:
+    print("Not eligible")
+
+👉 Condition returns True/False internally
+
+🔥 5. BOOLEAN OPERATORS
+AND
+
+Both conditions must be True
+
+print(True and False)  # False
+OR
+
+At least one condition True
+
+print(True or False)   # True
+NOT
+
+Reverses value
+
+print(not True)   # False
+📌 REAL-WORLD USES
+
+✔ Login systems (password check)
+✔ Age verification
+✔ Form validation
+✔ Decision making in AI logic
+
+❗ IMPORTANT INTERVIEW QUESTIONS
+Q1. What is Boolean in Python?
+
+👉 A data type with only two values: True and False.
+
+Q2. What does bool() function do?
+
+👉 Converts values into True or False.
+
+Q3. What is output of bool(0)?
+
+👉 False
+
+Q4. Why Boolean is important?
+
+👉 It is used for decision making in conditions and loops.
+
+🎯 QUICK REVISION TABLE
+Concept	Meaning
+True	Condition satisfied
+False	Condition not satisfied
+bool()	Converts value to True/False
+and	Both must be True
+or	Any one True
+not	Reverses result
+🚀 BONUS TIP (INTERVIEW READY)
+
+👉 Interviewer may ask:
+“What happens internally in if condition?”
+
+✔ Answer:
+
+Python evaluates expression and converts it into Boolean (True/False) to decide execution flow.

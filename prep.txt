@@ -2567,3 +2567,322 @@ match x:
 ✔ Answer:
 
 It makes code cleaner and more readable when handling multiple conditions and patterns.
+
+
+
+
+
+
+
+
+
+🐍 WHILE LOOP IN PYTHON
+📌 What is a While Loop?
+
+A while loop is used to repeat a block of code as long as a condition is True.
+
+👉 It checks condition before every iteration
+
+🧾 Basic Syntax:
+while condition:
+    # code
+🔥 Example:
+i = 1
+
+while i <= 5:
+    print(i)
+    i += 1
+
+✔ Output: 1 2 3 4 5
+
+⚡ 1. IMPORTANT POINT
+
+👉 Loop runs until condition becomes False
+
+👉 If condition never becomes False → Infinite Loop ❗
+
+❌ Infinite Loop Example:
+i = 1
+while i > 0:
+    print(i)   # runs forever
+⚡ 2. WHILE WITH BREAK
+
+Stops loop immediately
+
+i = 1
+while i <= 5:
+    if i == 3:
+        break
+    print(i)
+    i += 1
+
+✔ Output: 1 2
+
+⚡ 3. WHILE WITH CONTINUE
+
+Skips current iteration
+
+i = 0
+while i < 5:
+    i += 1
+    if i == 3:
+        continue
+    print(i)
+
+✔ Output: 1 2 4 5
+
+⚡ 4. WHILE WITH ELSE
+i = 1
+while i <= 3:
+    print(i)
+    i += 1
+else:
+    print("Done")
+⚡ 5. NESTED WHILE
+i = 1
+while i <= 2:
+    j = 1
+    while j <= 2:
+        print(i, j)
+        j += 1
+    i += 1
+🧠 IMPORTANT INTERVIEW QUESTIONS
+Q1. What is while loop?
+
+👉 Loop that runs while condition is True.
+
+Q2. Difference between for and while?
+
+👉 for → fixed iterations
+👉 while → condition-based
+
+Q3. What is infinite loop?
+
+👉 Loop that never ends due to always True condition.
+
+Q4. What is break and continue?
+
+👉 break → exit loop
+👉 continue → skip iteration
+
+🎯 QUICK REVISION
+Concept	Meaning
+while	condition loop
+break	stop loop
+continue	skip iteration
+else	runs after loop
+🚀 40 WHILE LOOP QUESTIONS (IDE + ANSWERS)
+🔰 BASIC (1–10)
+# 1 Print 1 to 5
+i = 1
+while i <= 5:
+    print(i)
+    i += 1
+# 2 Print even numbers
+i = 2
+while i <= 10:
+    print(i)
+    i += 2
+# 3 Print odd numbers
+i = 1
+while i <= 10:
+    print(i)
+    i += 2
+# 4 Reverse counting
+i = 5
+while i >= 1:
+    print(i)
+    i -= 1
+# 5 Sum of numbers
+i = 1
+s = 0
+while i <= 5:
+    s += i
+    i += 1
+print(s)
+# 6 Multiplication table
+n = 2
+i = 1
+while i <= 10:
+    print(n*i)
+    i += 1
+# 7 Count digits
+n = 1234
+c = 0
+while n > 0:
+    c += 1
+    n //= 10
+print(c)
+# 8 Sum of digits
+n = 123
+s = 0
+while n > 0:
+    s += n % 10
+    n //= 10
+print(s)
+# 9 Check positive
+n = 5
+while n > 0:
+    print("Positive")
+    break
+# 10 Print squares
+i = 1
+while i <= 5:
+    print(i*i)
+    i += 1
+⚙️ INTERMEDIATE (11–25)
+# 11 Factorial
+n = 5
+f = 1
+i = 1
+while i <= n:
+    f *= i
+    i += 1
+print(f)
+# 12 Reverse number
+n = 123
+rev = 0
+while n > 0:
+    rev = rev*10 + n%10
+    n //= 10
+print(rev)
+# 13 Palindrome number
+n = 121
+temp = n
+rev = 0
+while n > 0:
+    rev = rev*10 + n%10
+    n //= 10
+print(temp == rev)
+# 14 Armstrong number
+n = 153
+temp = n
+s = 0
+while n > 0:
+    d = n % 10
+    s += d**3
+    n //= 10
+print(temp == s)
+# 15 GCD
+a,b = 12,18
+while b:
+    a,b = b,a%b
+print(a)
+# 16 Fibonacci
+a,b = 0,1
+i = 1
+while i <= 5:
+    print(a)
+    a,b = b,a+b
+    i += 1
+# 17 Count even digits
+n = 1234
+c = 0
+while n > 0:
+    if (n%10)%2==0:
+        c+=1
+    n//=10
+print(c)
+# 18 Sum of even digits
+n = 1234
+s = 0
+while n > 0:
+    d = n%10
+    if d%2==0:
+        s+=d
+    n//=10
+print(s)
+# 19 Largest digit
+n = 1239
+m = 0
+while n > 0:
+    d = n%10
+    if d > m:
+        m = d
+    n//=10
+print(m)
+# 20 Smallest digit
+n = 1239
+m = 9
+while n > 0:
+    d = n%10
+    if d < m:
+        m = d
+    n//=10
+print(m)
+🚀 ADVANCED (26–40)
+# 21 Power
+x,n = 2,3
+res = 1
+i = 1
+while i <= n:
+    res *= x
+    i += 1
+print(res)
+# 22 Check prime
+n = 7
+i = 2
+flag = True
+while i < n:
+    if n % i == 0:
+        flag = False
+        break
+    i += 1
+print(flag)
+# 23 Count factors
+n = 6
+i = 1
+c = 0
+while i <= n:
+    if n % i == 0:
+        c += 1
+    i += 1
+print(c)
+# 24 Sum of factors
+n = 6
+i = 1
+s = 0
+while i <= n:
+    if n % i == 0:
+        s += i
+    i += 1
+print(s)
+# 25 Perfect number
+n = 6
+i = 1
+s = 0
+while i < n:
+    if n % i == 0:
+        s += i
+    i += 1
+print(s == n)
+# 26 Count zeros
+n = 10020
+c = 0
+while n > 0:
+    if n%10 == 0:
+        c += 1
+    n//=10
+print(c)
+# 27 Swap numbers
+a,b = 5,10
+while True:
+    a,b = b,a
+    break
+print(a,b)
+# 28 Menu loop
+while True:
+    print("1.Exit")
+    break
+# 29 Find first digit
+n = 1234
+while n >= 10:
+    n//=10
+print(n)
+# 30 Multiply digits
+n = 123
+res = 1
+while n > 0:
+    res *= n%10
+    n//=10
+print(res)

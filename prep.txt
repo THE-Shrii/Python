@@ -3381,3 +3381,342 @@ print(rev([1,2,3]))
 def merge(a,b):
     return a+b
 print(merge([1],[2]))
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+🐍 RECURSION IN PYTHON
+📌 What is Recursion?
+
+Recursion is a technique where a function calls itself to solve a problem.
+
+👉 Used to break problem into smaller subproblems
+
+🧾 Basic Syntax:
+def func(n):
+    if base_condition:
+        return result
+    return func(n-1)
+🔥 Example: Factorial
+def fact(n):
+    if n == 1:
+        return 1
+    return n * fact(n-1)
+
+print(fact(5))
+
+✔ Output: 120
+
+⚡ 1. IMPORTANT TERMS
+✅ Base Case
+
+👉 Stops recursion
+
+✅ Recursive Case
+
+👉 Function calling itself
+
+❗ Without Base Case = Infinite Recursion ❌
+def f(n):
+    return f(n-1)   # ❌ no stopping condition
+⚡ 2. CALL STACK (INTERVIEW IMPORTANT)
+
+👉 Each function call goes into stack
+👉 Executes until base case
+👉 Then returns back step by step
+
+⚡ 3. WHEN TO USE RECURSION?
+
+✔ Factorial
+✔ Fibonacci
+✔ Tree/Graph problems
+✔ Backtracking
+
+🧠 INTERVIEW QUESTIONS
+Q1. What is recursion?
+
+👉 Function calling itself.
+
+Q2. What is base case?
+
+👉 Condition to stop recursion.
+
+Q3. What happens without base case?
+
+👉 Infinite recursion → crash
+
+Q4. Recursion vs loop?
+
+👉 recursion → elegant, memory heavy
+👉 loop → efficient
+
+🎯 QUICK REVISION
+Concept	Meaning
+recursion	self-call
+base case	stopping condition
+stack	function calls
+🚀 40 RECURSION QUESTIONS (IDE + ANSWERS)
+🔰 BASIC (1–10)
+# 1 Print 1 to n
+def print_n(n):
+    if n == 0:
+        return
+    print_n(n-1)
+    print(n)
+
+print_n(5)
+# 2 Print n to 1
+def rev(n):
+    if n == 0:
+        return
+    print(n)
+    rev(n-1)
+
+rev(5)
+# 3 Sum of n numbers
+def sum_n(n):
+    if n == 0:
+        return 0
+    return n + sum_n(n-1)
+
+print(sum_n(5))
+# 4 Factorial
+def fact(n):
+    if n == 1:
+        return 1
+    return n * fact(n-1)
+
+print(fact(5))
+# 5 Power
+def power(x,n):
+    if n == 0:
+        return 1
+    return x * power(x,n-1)
+
+print(power(2,3))
+# 6 Count digits
+def count(n):
+    if n == 0:
+        return 0
+    return 1 + count(n//10)
+
+print(count(123))
+# 7 Sum of digits
+def sumdig(n):
+    if n == 0:
+        return 0
+    return n%10 + sumdig(n//10)
+
+print(sumdig(123))
+# 8 Reverse number
+def rev(n, r=0):
+    if n == 0:
+        return r
+    return rev(n//10, r*10 + n%10)
+
+print(rev(123))
+# 9 Palindrome number
+def pal(n, r=0):
+    if n == 0:
+        return r
+    return pal(n//10, r*10 + n%10)
+
+n = 121
+print(n == pal(n))
+# 10 Fibonacci
+def fib(n):
+    if n <= 1:
+        return n
+    return fib(n-1) + fib(n-2)
+
+print(fib(5))
+⚙️ INTERMEDIATE (11–25)
+# 11 GCD
+def gcd(a,b):
+    if b == 0:
+        return a
+    return gcd(b, a%b)
+
+print(gcd(12,18))
+# 12 LCM
+def lcm(a,b):
+    return a*b // gcd(a,b)
+
+print(lcm(4,6))
+# 13 Binary search
+def bs(arr,l,r,x):
+    if l>r:
+        return -1
+    mid=(l+r)//2
+    if arr[mid]==x:
+        return mid
+    elif x < arr[mid]:
+        return bs(arr,l,mid-1,x)
+    return bs(arr,mid+1,r,x)
+
+print(bs([1,2,3,4],0,3,3))
+# 14 Print even numbers
+def even(n):
+    if n == 0:
+        return
+    even(n-1)
+    if n%2==0:
+        print(n)
+
+even(10)
+# 15 Print odd numbers
+def odd(n):
+    if n == 0:
+        return
+    odd(n-1)
+    if n%2!=0:
+        print(n)
+
+odd(10)
+# 16 Sum array
+def sumarr(arr,n):
+    if n == 0:
+        return 0
+    return arr[n-1] + sumarr(arr,n-1)
+
+print(sumarr([1,2,3],3))
+# 17 Max in array
+def maxarr(arr,n):
+    if n == 1:
+        return arr[0]
+    return max(arr[n-1], maxarr(arr,n-1))
+
+print(maxarr([1,5,3],3))
+# 18 Reverse string
+def rev(s):
+    if s == "":
+        return ""
+    return rev(s[1:]) + s[0]
+
+print(rev("abc"))
+# 19 Count vowels
+def countv(s):
+    if s == "":
+        return 0
+    return (1 if s[0] in "aeiou" else 0) + countv(s[1:])
+
+print(countv("hello"))
+# 20 Check sorted
+def sorted_check(arr,n):
+    if n == 1:
+        return True
+    return arr[n-1]>=arr[n-2] and sorted_check(arr,n-1)
+
+print(sorted_check([1,2,3],3))
+🚀 ADVANCED (26–40)
+# 21 Tower of Hanoi
+def toh(n,a,b,c):
+    if n == 1:
+        print(a,"->",c)
+        return
+    toh(n-1,a,c,b)
+    print(a,"->",c)
+    toh(n-1,b,a,c)
+
+toh(3,"A","B","C")
+# 22 Sum of squares
+def sumsq(n):
+    if n == 0:
+        return 0
+    return n*n + sumsq(n-1)
+
+print(sumsq(3))
+# 23 Product of digits
+def prod(n):
+    if n == 0:
+        return 1
+    return (n%10) * prod(n//10)
+
+print(prod(123))
+# 24 Count zeros
+def count0(n):
+    if n == 0:
+        return 0
+    return (1 if n%10==0 else 0) + count0(n//10)
+
+print(count0(1020))
+# 25 First uppercase
+def firstU(s):
+    if s == "":
+        return ""
+    if s[0].isupper():
+        return s[0]
+    return firstU(s[1:])
+
+print(firstU("abcD"))
+# 26 Remove duplicates string
+def remdup(s):
+    if len(s) <= 1:
+        return s
+    if s[0] == s[1]:
+        return remdup(s[1:])
+    return s[0] + remdup(s[1:])
+
+print(remdup("aabbc"))
+# 27 Replace char
+def replace(s):
+    if s == "":
+        return ""
+    if s[0] == 'a':
+        return 'x' + replace(s[1:])
+    return s[0] + replace(s[1:])
+
+print(replace("apple"))
+# 28 Subset count
+def subset(n):
+    if n == 0:
+        return 1
+    return 2 * subset(n-1)
+
+print(subset(3))
+# 29 Climb stairs
+def climb(n):
+    if n<=2:
+        return n
+    return climb(n-1)+climb(n-2)
+
+print(climb(4))
+# 30 Print binary
+def binary(n):
+    if n == 0:
+        return
+    binary(n//2)
+    print(n%2,end="")
+
+binary(5)
+🚀 FINAL INTERVIEW TIP 🔥
+
+👉 Say this:
+
+Recursion simplifies problems by dividing them into smaller subproblems, but must always include a base case to avoid infinite recursion.

@@ -2347,3 +2347,223 @@ else:
 
 
 
+🐍 MATCH-CASE IN PYTHON
+📌 What is match-case?
+
+match-case is used for pattern matching, similar to switch-case in other languages.
+
+👉 Introduced in Python 3.10
+
+🧾 Basic Syntax:
+match value:
+    case pattern1:
+        # code
+    case pattern2:
+        # code
+    case _:
+        # default
+🔥 1. SIMPLE EXAMPLE
+day = 2
+
+match day:
+    case 1:
+        print("Monday")
+    case 2:
+        print("Tuesday")
+    case 3:
+        print("Wednesday")
+    case _:
+        print("Invalid")
+⚡ 2. MULTIPLE VALUES IN ONE CASE
+x = 3
+
+match x:
+    case 1 | 2:
+        print("One or Two")
+    case 3 | 4:
+        print("Three or Four")
+⚡ 3. USING VARIABLES (CAPTURING)
+value = 10
+
+match value:
+    case x:
+        print("Value is", x)
+⚡ 4. MATCH WITH CONDITIONS (GUARD)
+num = 15
+
+match num:
+    case x if x > 10:
+        print("Greater than 10")
+    case _:
+        print("Small number")
+⚡ 5. MATCH WITH DATA STRUCTURES
+👉 List Pattern
+data = [1, 2]
+
+match data:
+    case [a, b]:
+        print(a, b)
+👉 Tuple Pattern
+point = (2, 3)
+
+match point:
+    case (x, y):
+        print("X:", x, "Y:", y)
+⚡ 6. DEFAULT CASE
+x = 100
+
+match x:
+    case 1:
+        print("One")
+    case _:
+        print("Default case")
+🧠 IMPORTANT POINTS
+
+✔ Works like switch-case but more powerful
+✔ Supports patterns (list, tuple, dict)
+✔ _ is default case
+✔ First matching case executes
+
+❗ INTERVIEW QUESTIONS
+Q1. What is match-case?
+
+👉 Pattern matching feature introduced in Python 3.10.
+
+Q2. Difference between if-else and match-case?
+
+👉 if-else → conditions
+👉 match-case → pattern matching
+
+Q3. What is _ in match-case?
+
+👉 Default case (like else)
+
+🎯 QUICK REVISION
+Concept	Meaning
+match	check value
+case	pattern
+_	default
+|	multiple options
+🚀 20 MATCH-CASE PRACTICE QUESTIONS
+🔰 BASIC (1–10)
+# 1 Print day
+day = 1
+match day:
+    case 1:
+        print("Monday")
+# 2 Check number
+x = 5
+match x:
+    case 5:
+        print("Five")
+# 3 Multiple match
+x = 2
+match x:
+    case 1 | 2:
+        print("1 or 2")
+# 4 Default case
+x = 10
+match x:
+    case 1:
+        print("One")
+    case _:
+        print("Other")
+# 5 Even/Odd
+x = 4
+match x % 2:
+    case 0:
+        print("Even")
+    case _:
+        print("Odd")
+# 6 Character check
+ch = 'a'
+match ch:
+    case 'a' | 'e' | 'i' | 'o' | 'u':
+        print("Vowel")
+# 7 Grade system
+marks = 80
+match marks:
+    case m if m >= 90:
+        print("A")
+    case m if m >= 75:
+        print("B")
+# 8 Simple calculator
+a,b,op = 2,3,'+'
+match op:
+    case '+':
+        print(a+b)
+# 9 Login role
+role = "admin"
+match role:
+    case "admin":
+        print("Full access")
+# 10 Check zero
+x = 0
+match x:
+    case 0:
+        print("Zero")
+⚙️ INTERMEDIATE (11–20)
+# 11 List match
+lst = [1,2]
+match lst:
+    case [a,b]:
+        print(a+b)
+# 12 Tuple match
+t = (2,3)
+match t:
+    case (x,y):
+        print(x*y)
+# 13 Check range
+x = 15
+match x:
+    case n if n > 10:
+        print("Greater")
+# 14 Negative check
+x = -1
+match x:
+    case n if n < 0:
+        print("Negative")
+# 15 Password check
+pwd = "1234"
+match pwd:
+    case "1234":
+        print("Correct")
+# 16 Menu system
+choice = 2
+match choice:
+    case 1:
+        print("Start")
+    case 2:
+        print("Stop")
+# 17 HTTP status
+code = 404
+match code:
+    case 200:
+        print("OK")
+    case 404:
+        print("Not Found")
+# 18 Temperature
+temp = 30
+match temp:
+    case t if t > 25:
+        print("Hot")
+# 19 Multiple conditions
+x = 7
+match x:
+    case 1|3|5|7:
+        print("Odd small")
+# 20 Default fallback
+x = 100
+match x:
+    case 1:
+        print("One")
+    case _:
+        print("Other")
+🚀 FINAL INTERVIEW TIP
+
+👉 If interviewer asks:
+“Why use match-case?”
+
+✔ Answer:
+
+It makes code cleaner and more readable when handling multiple conditions and patterns.

@@ -4382,3 +4382,205 @@ print(sys.modules.keys())
 👉 Say this:
 
 A module in Python is a file containing reusable code like functions, variables, and classes. It helps in code organization and reusability using the import statement.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+🐍 DATES IN PYTHON
+📌 What are Dates?
+
+Dates in Python are handled using the Python datetime module, which allows you to work with:
+
+Date (day, month, year)
+Time (hours, minutes, seconds)
+Date + Time together
+📦 1. IMPORT DATETIME MODULE
+import datetime
+📅 2. CURRENT DATE
+import datetime
+
+today = datetime.date.today()
+print(today)
+
+✔ Output: 2026-04-24 (example)
+
+⏰ 3. CURRENT DATE & TIME
+import datetime
+
+now = datetime.datetime.now()
+print(now)
+
+✔ Output: 2026-04-24 19:30:10
+
+🧾 4. CREATE CUSTOM DATE
+import datetime
+
+d = datetime.date(2025, 12, 25)
+print(d)
+⏳ 5. CREATE CUSTOM DATE & TIME
+import datetime
+
+dt = datetime.datetime(2025, 12, 25, 10, 30)
+print(dt)
+⚡ 6. EXTRACT DATE PARTS
+import datetime
+
+now = datetime.datetime.now()
+
+print(now.year)
+print(now.month)
+print(now.day)
+⚡ 7. FORMATTING DATES (VERY IMPORTANT)
+import datetime
+
+now = datetime.datetime.now()
+
+print(now.strftime("%d-%m-%Y"))
+print(now.strftime("%A"))
+📌 FORMAT CODES:
+Code	Meaning
+%d	Day
+%m	Month
+%Y	Year
+%A	Weekday
+%H	Hour
+%M	Minute
+⚡ 8. TIME DIFFERENCE
+import datetime
+
+d1 = datetime.date(2025,1,1)
+d2 = datetime.date(2026,1,1)
+
+diff = d2 - d1
+print(diff.days)
+⚡ 9. TIMESTAMP (VERY IMPORTANT)
+import time
+
+print(time.time())
+
+👉 seconds since 1970 (Unix time)
+
+⚡ 10. ADD DAYS TO DATE
+import datetime
+
+today = datetime.date.today()
+
+new_date = today + datetime.timedelta(days=5)
+print(new_date)
+🧠 INTERVIEW QUESTIONS
+Q1. What is datetime module?
+
+👉 Module used to work with dates and time.
+
+Q2. Difference between date and datetime?
+
+👉 date → only date
+👉 datetime → date + time
+
+Q3. What is strftime()?
+
+👉 Converts date into formatted string.
+
+Q4. What is timedelta?
+
+👉 Used to add/subtract time.
+
+🎯 QUICK REVISION
+Concept	Meaning
+date	only date
+datetime	date + time
+strftime	format date
+timedelta	time difference
+🚀 30 DATE PRACTICE QUESTIONS (IDE + ANSWERS)
+🔰 BASIC (1–10)
+# 1 Current date
+import datetime
+print(datetime.date.today())
+# 2 Current time
+print(datetime.datetime.now())
+# 3 Year
+print(datetime.datetime.now().year)
+# 4 Month
+print(datetime.datetime.now().month)
+# 5 Day
+print(datetime.datetime.now().day)
+# 6 Custom date
+print(datetime.date(2025,1,1))
+# 7 Custom datetime
+print(datetime.datetime(2025,1,1,10,0))
+# 8 Weekday
+print(datetime.datetime.now().strftime("%A"))
+# 9 Format date
+print(datetime.datetime.now().strftime("%d/%m/%Y"))
+# 10 Timestamp
+import time
+print(time.time())
+⚙️ INTERMEDIATE (11–20)
+# 11 Add days
+import datetime
+print(datetime.date.today() + datetime.timedelta(days=10))
+# 12 Subtract days
+print(datetime.date.today() - datetime.timedelta(days=5))
+# 13 Difference
+d1 = datetime.date(2025,1,1)
+d2 = datetime.date(2025,1,10)
+print((d2-d1).days)
+# 14 Format month name
+print(datetime.datetime.now().strftime("%B"))
+# 15 Hour
+print(datetime.datetime.now().hour)
+# 16 Minute
+print(datetime.datetime.now().minute)
+# 17 Second
+print(datetime.datetime.now().second)
+# 18 Leap year check
+import calendar
+print(calendar.isleap(2024))
+# 19 Day name
+print(datetime.datetime.now().strftime("%A"))
+# 20 Custom format
+print(datetime.datetime.now().strftime("%d-%b-%Y"))
+🚀 ADVANCED (21–30)
+# 21 Convert string to date
+from datetime import datetime
+print(datetime.strptime("2025-01-01","%Y-%m-%d"))
+# 22 Date to string
+print(datetime.datetime.now().strftime("%Y-%m-%d"))
+# 23 Add months (approx)
+import datetime
+print(datetime.date.today() + datetime.timedelta(days=30))
+# 24 Future date
+print(datetime.date.today() + datetime.timedelta(days=100))
+# 25 Past date
+print(datetime.date.today() - datetime.timedelta(days=100))
+# 26 Compare dates
+print(datetime.date(2025,1,1) > datetime.date(2024,1,1))
+# 27 Extract year-month-day
+d = datetime.date.today()
+print(d.year, d.month, d.day)
+# 28 ISO format
+print(datetime.date.today().isoformat())
+# 29 Replace date values
+d = datetime.date.today()
+print(d.replace(year=2030))
+# 30 Countdown days
+import datetime
+future = datetime.date(2026,12,31)
+print((future - datetime.date.today()).days)
+🚀 FINAL INTERVIEW ANSWER 🔥
+
+👉 Say this:
+
+The datetime module in Python is used to handle dates and times. It provides classes like date, datetime, and timedelta for performing operations such as formatting, arithmetic, and comparisons.

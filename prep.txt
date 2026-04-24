@@ -5180,3 +5180,60 @@ Regex is a pattern-matching technique used in Python for searching, validating, 
 
 
 
+1. Python Input/Output (PIP / I-O)
+🔹 Output in Python
+
+Output means displaying data on screen.
+
+👉 Function used:
+print()
+🔹 Example:
+print("Hello World")
+🔹 Output:
+Hello World
+🔹 Input in Python
+
+Input means taking data from user.
+
+👉 Function used:
+input()
+🔹 Example:
+name = input("Enter your name: ")
+print("Hello", name)
+🔹 Output:
+Enter your name: Shrii
+Hello Shrii
+🔹 Type Conversion with Input
+
+By default, input is string type.
+
+Example:
+age = int(input("Enter age: "))
+🔹 Key Points (Very Important)
+print() → output show karta hai
+input() → user se data leta hai
+input always string type hota hai
+type conversion is needed for numbers
+📦 2. pip (Python Package Installer)
+🔹 Definition:
+
+pip is a package manager used to install Python libraries/modules.
+
+🔹 Example:
+pip install numpy
+🔹 Uses:
+Install libraries
+Manage packages
+Update modules
+🔹 Common Commands:
+pip install flask
+pip uninstall flask
+pip list
+🔹 Example:
+
+If you want to use machine learning library:
+
+pip install tensorflow
+✨ Conclusion
+Python I/O (input/output) is used for interaction with user
+pip is used for installing external Python libraries

@@ -5336,3 +5336,242 @@ PIP is the standard package manager for Python used to install, upgrade, and man
 
 
 
+🧠 TRY EXCEPT IN PYTHON (EXCEPTION HANDLING)
+📌 What is Exception Handling?
+
+In Python, exception handling is used to handle errors so that the program does NOT crash unexpectedly.
+
+👉 Instead of breaking the program, we “catch” errors and handle them safely.
+
+⚡ 1. BASIC TRY EXCEPT
+try:
+    x = 10 / 0
+except:
+    print("Something went wrong")
+⚡ 2. SPECIFIC ERROR HANDLING
+try:
+    x = 10 / 0
+except ZeroDivisionError:
+    print("Cannot divide by zero")
+⚡ 3. MULTIPLE EXCEPT BLOCKS
+try:
+    x = int("abc")
+except ZeroDivisionError:
+    print("Divide error")
+except ValueError:
+    print("Invalid value")
+⚡ 4. ELSE BLOCK (RUN IF NO ERROR)
+try:
+    x = 10 / 2
+except:
+    print("Error")
+else:
+    print("No error, result =", x)
+⚡ 5. FINALLY BLOCK (ALWAYS RUNS)
+try:
+    x = 10 / 2
+except:
+    print("Error")
+finally:
+    print("This will always run")
+⚡ 6. COMBINATION STRUCTURE
+try:
+    # risky code
+except:
+    # handle error
+else:
+    # if no error
+finally:
+    # always runs
+🧠 COMMON EXCEPTIONS
+Error	Meaning
+ZeroDivisionError	divide by zero
+ValueError	wrong value type
+TypeError	wrong type
+IndexError	list index wrong
+KeyError	dict key missing
+🔥 REAL-WORLD EXAMPLE
+try:
+    age = int(input("Enter age: "))
+    print(100 / age)
+except ValueError:
+    print("Please enter a number")
+except ZeroDivisionError:
+    print("Age cannot be zero")
+🧠 INTERVIEW QUESTIONS
+Q1. What is try-except?
+
+👉 Mechanism to handle runtime errors.
+
+Q2. Why use exception handling?
+
+👉 To prevent program crash.
+
+Q3. Difference between error and exception?
+
+👉 Error → system issue
+👉 Exception → handled runtime issue
+
+Q4. What is finally block?
+
+👉 Always executes whether error occurs or not.
+
+Q5. What is else in try-except?
+
+👉 Runs when NO exception occurs.
+
+🎯 QUICK REVISION
+Block	Purpose
+try	risky code
+except	handle error
+else	no error case
+finally	always runs
+🚀 30 TRY EXCEPT PRACTICE QUESTIONS
+🔰 BASIC (1–10)
+try:
+    print(10/0)
+except:
+    print("Error")
+try:
+    print(int("abc"))
+except ValueError:
+    print("Invalid")
+try:
+    print([1,2][5])
+except IndexError:
+    print("Index error")
+try:
+    print({"a":1}["b"])
+except KeyError:
+    print("Key missing")
+try:
+    print("10"+10)
+except TypeError:
+    print("Type error")
+try:
+    x = 5/1
+except:
+    print("Error")
+else:
+    print("Success")
+try:
+    x = 10/2
+finally:
+    print("Done")
+try:
+    int("123")
+except:
+    print("Error")
+try:
+    lst = [1,2,3]
+    print(lst[1])
+except:
+    print("Error")
+try:
+    print(5/0)
+except ZeroDivisionError:
+    print("Cannot divide")
+⚙️ INTERMEDIATE (11–20)
+try:
+    print(int("10"))
+except:
+    print("Fail")
+try:
+    x = 10
+except:
+    print("Error")
+else:
+    print("No error")
+try:
+    d = {"a":1}
+    print(d["a"])
+except:
+    print("Error")
+try:
+    print(len(10))
+except TypeError:
+    print("Type error")
+try:
+    print(10/0)
+except Exception as e:
+    print(e)
+try:
+    print("hello")
+except:
+    print("Error")
+finally:
+    print("Always")
+try:
+    print([].pop())
+except IndexError:
+    print("Empty list")
+try:
+    print({}[0])
+except KeyError:
+    print("Key error")
+try:
+    print("10"+10)
+except:
+    print("Mismatch")
+try:
+    print(int("100"))
+except:
+    print("Fail")
+🚀 ADVANCED (21–30)
+try:
+    x = 1/0
+except ZeroDivisionError as e:
+    print(e)
+try:
+    lst = [1]
+    print(lst[5])
+except Exception as e:
+    print(e)
+try:
+    d = {"a":1}
+    print(d["b"])
+except Exception as e:
+    print(e)
+try:
+    print(int("abc"))
+except Exception as e:
+    print(e)
+try:
+    print(5/1)
+except:
+    print("Error")
+else:
+    print("OK")
+finally:
+    print("End")
+try:
+    x = [1,2,3]
+    print(x[2])
+except:
+    print("Error")
+try:
+    print(len("hello"))
+except:
+    print("Error")
+try:
+    print("Python"[10])
+except:
+    print("Index error")
+try:
+    print(10/2)
+except:
+    print("Error")
+try:
+    print("done")
+except:
+    print("fail")
+finally:
+    print("always run")
+🚀 FINAL INTERVIEW ANSWER 🔥
+
+👉 Say this:
+
+Try-except in Python is used for exception handling. It allows us to handle runtime errors gracefully using try, except, else, and finally blocks so that the program does not crash.
+
+
+
